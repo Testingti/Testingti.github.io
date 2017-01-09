@@ -1,0 +1,50 @@
+<div class="splash">
+    <div class="overlay">
+        <span class="welcome">Welcome to</span>
+        <h1>Ben Hanh</h1>
+        <span class="address">120 Northfield Dr.</span>
+    </div>
+    <div class="overlay-action">
+        <h1>Ben Thanh</h1>
+    </div>
+</div>
+
+<div class="button-container">
+    <button class="large" id="yelp">
+        <span><font class="thin"></font> Click here to fill in some info</span>
+    </button>
+    <div class="button-action">
+        <div class="yelp-review">
+            <div class="form-container">
+                <label>Please enter your name </label>
+                <input type="text" ng-model="homeCtrl.formData.username"/>
+                <br>
+                <tr align="left"> <br>
+                    <td>How did you get to this website?</td> <br>
+
+                    <div ng-repeat="option in homeCtrl.options"> 
+                        <input name="role" type="radio" ng-model="homeCtrl.formData.selection" value="{{option.id}}">
+                        {{option.value}}                         
+                        <br>
+                        <br>                                                                        
+                    </div> 
+                    <label>Any issues? any questions? or and suggestions? Please let us know </label>
+                    <textarea name = "comments" ng-model="homeCtrl.formData.comments"> </textarea><br>  
+                </tr> 
+                <br>
+                <button type="submit" ui-sref="base.submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!--<button id="wifi" ui-sref="base.wifi">
+        <span>WiFi</span>
+    </button>
+    <button id="menu" ui-sref="base.menu">
+        <span>Menu</span>
+    </button>
+    <button id="about" ui-sref="base.about">
+        <span>About</span>
+    </button> -->
+
+</div>

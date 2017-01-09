@@ -1,0 +1,9 @@
+{
+    "name": "node",
+    "version": "0.0.0",
+    "description": "simple",
+    "main": "server.js",
+    "dependencies": {
+        "express": "^4.13.4"
+    }
+}

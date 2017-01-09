@@ -205,7 +205,7 @@ button.large span {
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	height: 16px;
-	left: calc(50% + 24px);
+	/*left: calc(50% + 24px);*/
 }
 
 a {

@@ -1,113 +1,32 @@
 <!doctype html>
 <html lang="en">
 	<head>
-    <script type="text/javascript">
-    adroll_adv_id = "FXNNAA5REZDA3OJ76PVW4P";
-    adroll_pix_id = "UGXJK2Y7WFETJJ7GTWKKYY";
-    /* OPTIONAL: provide email to improve user identification */
-    /* adroll_email = "username@example.com"; */
-    (function () {
-        var _onload = function(){
-            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
-            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
-            var scr = document.createElement("script");
-            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-            scr.setAttribute('async', 'true');
-            scr.type = "text/javascript";
-            scr.src = host + "/j/roundtrip.js";
-            ((document.getElementsByTagName('head') || [null])[0] ||
-                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        };
-        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
-        else {window.attachEvent('onload', _onload)}
-    }());
-</script>
 
-
-
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '102114733590326');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=102114733590326&ev=PageView&noscript=1"
-/></noscript>
-<!-- DO NOT MODIFY -->
-<!-- End Facebook Pixel Code -->
+		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=102114733590326&ev=PageView&noscript=1"/></noscript>
 
 		<meta charset="utf-8">
-		<title>TagPool at Ben Hanh</title>
+		<title>Busboy at Ben Hanh</title>
 		<link rel="stylesheet" href="style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-		<script src="jquery.min.js"></script>
+		<script src="libs/jquery.min.js"></script>
+		<script src="libs/angular.min.js"></script>
+		<script src="libs/angular-animate.min.js"></script>
+		<script src="libs/angular-ui-router.min.js"></script>
+
+		<script src="app/app.js"></script>
+		<script src="app/app.router.js"></script>
+		<script src="app/base/baseController.js"></script>
+		<script src="app/home/homeController.js"></script>
+		<script src="app/submit/submitController.js"></script>
+
+		<script src="app/home/homeService.js"></script>
+		
+		<script src="app/pixel.js"></script>
+		<script src="app/adroll.js"></script>
 	</head>
 
-	<body>
-		<div class="container">
-			<div class="header">
-				<img class="logo" src="images/logo.png"/>
-			</div>
-			<div class="splash">
-				<div class="overlay">
-					<span class="welcome">Welcome to</span>
-					<h1>Ben Hanh</h1>
-					<span class="address">120 Northfield Dr.</span>
-				</div>
-				<div class="overlay-action">
-					<h1>Ben Thanh</h1>
-				</div>
-			</div>
-			<div class="button-container">
-				<button class="large" id="yelp">
-					<span><font class="thin"></font> Click here to fill in some info</span>
-				</button>
-				<div class="button-action">
-					<div class="yelp-review">
-						<div class="form-container">
-							<label>Please enter your name </label>
-							<input type="text"/>
-											<tr align="left"> <br>
-              <td>How did you get to this website?</td> <br>
-              <td> 
-                 <input name="role" value="admin" type="radio">
-                       This is my first time here and I come from facebook mobile app<br> 
-                 <input name="role" value="engineer" type="radio">
-                       This is my first time here and I come from facebook website <br> 
-                 <input name="role" value="manager" type="radio">
-                       This is my second time here, I got here from clicking the facebook advertisement post on my wall<br> 
-                 <input name="role" value="manager" type="radio">
-                       This is my third time here, I got here from clicking the the second facebook advertisement post on my wall<br> <br> 
-                <label>Any issues? any questions? or and suggestions? Please let us know </label>
-               <textarea name = "comments"> </textarea><br> 
-                 
-              </td> 
-            </tr> <br>
-							<button type="submit" onclick="window.location.href='about.html'">Submit</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- <button id="wifi" onclick="window.location.href='about.html'">>
-					<span>WiFi</span>
-				</button>
-				<button id="menu" onclick="window.location.href='about.html'">>
-					<span>Menu</span>
-				</button>
-				<button id="about" onclick="window.location.href='about.html'">>
-					<span>About</span>
-				</button> -->
-			</div>
-			<div class="footer">
-				<span>© 2017 <strong>Busboy</strong></span>
-				<!-- <span><a href="about.html">About Us</a></span> -->
-			</div>
+	<body ng-app="busboy">
+		<div class="container" ui-view>
 		</div>
-		<script src="script.js"></script>
 	</body>
 </html>
